@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { Home, User, Sparkles, Heart } from 'lucide-vue'
 
 const router = useRouter()
 const passphrase = ref('')
@@ -42,7 +43,7 @@ if (success.value) {
     <div class="min-h-screen bg-midnight-plum text-white flex flex-col items-center justify-center p-4">
       <div class="text-center max-w-md">
         <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-rose-gold to-soft-blush flex items-center justify-center animate-bounce-slow">
-          <span class="text-5xl">✨</span>
+          <Sparkles class="text-5xl" />
         </div>
         <h1 class="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-rose-gold">
           Selamat Datang

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
+import { Home, User, Sparkles, Heart } from 'lucide-vue'
 
 onMounted(() => {
   // Load first-visit.js if exists
@@ -58,7 +59,9 @@ onMounted(() => {
       <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-center">Yukie's Love</h2>
       <div class="max-w-3xl mx-auto bg-[#3A1A4A] rounded-xl p-6 border border-[#5D3A6B]">
         <div class="flex items-center gap-4 mb-4">
-          <div class="w-12 h-12 rounded-full bg-rose-gold flex items-center justify-center text-midnight-plum font-bold">🎤</div>
+          <div class="w-12 h-12 rounded-full bg-rose-gold flex items-center justify-center text-midnight-plum font-bold">
+            <Sparkles />
+          </div>
           <div>
             <h3 class="font-medium">Voice Note: Cantik Moment</h3>
             <p class="text-sm text-soft-blush">"Today… we built our home. Not just on screen. But in heart."</p>
