@@ -12,6 +12,6 @@
       "dest": "/"
     }
   ],
-  "buildCommand": "npm install && npm run build",
+  "buildCommand": "npm install --legacy-peer-deps && npm run build",
   "outputDirectory": "dist"
 }
