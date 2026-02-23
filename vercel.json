@@ -1,3 +1,4 @@
 {
-  "output": "static"
+  "output": "static",
+  "buildOutputPath": "dist"
 }
