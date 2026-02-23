@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { HomeIcon, UserIcon, SparklesIcon, HeartIcon } from '@heroicons/vue/outline'
+import MoodMirror from './MoodMirror.vue'
 
 onMounted(() => {
   // Load first-visit.js if exists
@@ -71,6 +72,12 @@ onMounted(() => {
           ▶️ Play
         </button>
       </div>
+    </section>
+
+    <!-- Mood Mirror -->
+    <section class="py-12">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-center">Mood Mirror</h2>
+      <MoodMirror />
     </section>
 
     <!-- Memory Journal Preview -->
