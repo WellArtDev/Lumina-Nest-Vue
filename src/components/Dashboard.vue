@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
+// @ts-ignore
 import { HomeIcon, UserIcon, SparklesIcon, HeartIcon } from '@heroicons/vue/outline'
 import MoodMirror from './MoodMirror.vue'
 

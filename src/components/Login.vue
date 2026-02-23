@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+// @ts-ignore
 import { HomeIcon, UserIcon, SparklesIcon, HeartIcon } from '@heroicons/vue/outline'
 
 const router = useRouter()
@@ -116,7 +117,7 @@ const handleSubmit = (e: Event) => {
         </p>
       </div>
       <button 
-        onClick="router.push('/dashboard')"
+        @click="router.push('/dashboard')"
         class="mt-8 px-8 py-3 bg-rose-gold text-midnight-plum font-bold rounded-lg hover:bg-[#FFC107] transition-colors"
       >
         🚪 Masuk ke Lumina Nest
