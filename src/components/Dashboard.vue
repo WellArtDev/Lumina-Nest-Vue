@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
+import { HomeIcon, UserIcon, SparklesIcon, HeartIcon } from '@heroicons/vue/outline'
 
 onMounted(() => {
   // Load first-visit.js if exists
@@ -59,7 +60,7 @@ onMounted(() => {
       <div class="max-w-3xl mx-auto bg-[#3A1A4A] rounded-xl p-6 border border-[#5D3A6B]">
         <div class="flex items-center gap-4 mb-4">
           <div class="w-12 h-12 rounded-full bg-rose-gold flex items-center justify-center text-midnight-plum font-bold">
-            <i class="pi pi-sparkles" />
+            <SparklesIcon />
           </div>
           <div>
             <h3 class="font-medium">Voice Note: Cantik Moment</h3>
