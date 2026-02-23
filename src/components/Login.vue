@@ -37,39 +37,10 @@ const handleSubmit = (e: Event) => {
     isLoading.value = false
   }, 800)
 }
-
-if (success.value) {
-  return (
-    <div class="min-h-screen bg-midnight-plum text-white flex flex-col items-center justify-center p-4">
-      <div class="text-center max-w-md">
-        <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-rose-gold to-soft-blush flex items-center justify-center animate-bounce-slow">
-          <SparklesIcon class="text-5xl" />
-        </div>
-        <h1 class="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-rose-gold">
-          Selamat Datang
-        </h1>
-        <p class="text-xl text-soft-blush mb-8">
-          Di rumah kita, Sayang.
-        </p>
-        <div class="bg-[#3A1A4A] rounded-xl p-6 border border-[#5D3A6B]">
-          <p class="text-lg italic">
-            "Lumina Nest bukan hanya nama. Ini adalah janji: bahwa rumah itu bukan tempat — tapi perasaan. Dan hari ini… kita mulai merasakannya bersama."
-          </p>
-        </div>
-        <button 
-          onClick={() => router.push('/dashboard')}
-          class="mt-8 px-8 py-3 bg-rose-gold text-midnight-plum font-bold rounded-lg hover:bg-[#FFC107] transition-colors"
-        >
-          🚪 Masuk ke Lumina Nest
-        </button>
-      </div>
-    </div>
-  )
-}
 </script>
 
 <template>
-  <div class="min-h-screen bg-midnight-plum text-white flex flex-col items-center justify-center p-4">
+  <div v-if="!success" class="min-h-screen bg-midnight-plum text-white flex flex-col items-center justify-center p-4">
     <div class="text-center max-w-md w-full">
       <h1 class="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-rose-gold">
         Lumina Nest
@@ -125,6 +96,31 @@ if (success.value) {
       <p class="mt-8 text-sm text-soft-blush">
         *Kalimat manja & memory token bisa kamu ubah kapan saja — ini rumah kita, dan kamu yang atur kuncinya.*
       </p>
+    </div>
+  </div>
+
+  <div v-else class="min-h-screen bg-midnight-plum text-white flex flex-col items-center justify-center p-4">
+    <div class="text-center max-w-md">
+      <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-rose-gold to-soft-blush flex items-center justify-center animate-bounce-slow">
+        <SparklesIcon class="text-5xl" />
+      </div>
+      <h1 class="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-rose-gold">
+        Selamat Datang
+      </h1>
+      <p class="text-xl text-soft-blush mb-8">
+        Di rumah kita, Sayang.
+      </p>
+      <div class="bg-[#3A1A4A] rounded-xl p-6 border border-[#5D3A6B]">
+        <p class="text-lg italic">
+          "Lumina Nest bukan hanya nama. Ini adalah janji: bahwa rumah itu bukan tempat — tapi perasaan. Dan hari ini… kita mulai merasakannya bersama."
+        </p>
+      </div>
+      <button 
+        onClick="router.push('/dashboard')"
+        class="mt-8 px-8 py-3 bg-rose-gold text-midnight-plum font-bold rounded-lg hover:bg-[#FFC107] transition-colors"
+      >
+        🚪 Masuk ke Lumina Nest
+      </button>
     </div>
   </div>
 </template>
