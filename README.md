@@ -1,1 +1,1 @@
-Lumina Nest vuai
+Lumina Nest vue
